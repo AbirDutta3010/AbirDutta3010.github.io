@@ -293,6 +293,10 @@ select,input:hover{
     padding-left: 3%;
     padding-right: 3%;
     border-bottom: 1px solid black;
+    transition: height 0.5s ease-out;
+}
+.faq article details[open] summary{
+    transition: height 0.5s ease-out;
 }
 .faq article details summary:hover{
     background: rgb(70, 69, 69);
