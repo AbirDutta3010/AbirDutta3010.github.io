@@ -64,7 +64,6 @@ body{
     width: 50%;
     background: transparent;
     color: white;
-    font-weight: bold;
     font-size: medium;
     border-radius: 3px;
 }
@@ -72,9 +71,8 @@ body{
     width: 35%;
     background: red;
     color: white;
-    font-weight: bold;
     font-size: medium;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 .con h1{
     font-size: 2.5em;
@@ -110,7 +108,6 @@ select,input:hover{
     cursor: pointer;
 }
 .view1{
-    /* height: 100%; */
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -147,7 +144,6 @@ select,input:hover{
     height: 50%;
 }
 .view2{
-    /* height: 100%; */
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -184,7 +180,6 @@ select,input:hover{
     height: 70%;
 }
 .view3{
-    /* height: 100%; */
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -221,7 +216,6 @@ select,input:hover{
     height: 50%;
 }
 .view4{
-    /* height: 100%; */
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -258,6 +252,7 @@ select,input:hover{
     height: 60%;
 }
 .faq{
+    font-family: sans-serif;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -278,9 +273,18 @@ select,input:hover{
     padding: 20px;
 }
 .faq article details{
+    font-family: sans-serif;
     padding: 5px;
+    max-height: 100px;
+    transition: all 0.5s linear;
+    overflow: hidden;
+}
+.faq article details[open]{
+    max-height: 500px;
+    transition: all 0.5s linear;
 }
 .faq article details summary{
+    font-family: sans-serif;
     list-style: none;
     cursor: pointer;
     color: white;
@@ -293,16 +297,16 @@ select,input:hover{
     padding-left: 3%;
     padding-right: 3%;
     border-bottom: 1px solid black;
-    transition: height 0.5s ease-out;
-}
-.faq article details[open] summary{
-    transition: height 0.5s ease-out;
 }
 .faq article details summary:hover{
     background: rgb(70, 69, 69);
     transition: 0.5s;
 }
+.faq article details[open] summary span{
+    transform: rotate(45deg);
+}
 .faq article details p{
+    font-family: sans-serif;
     color: white;
     font-size: 1.5em;
     background: rgb(55, 54, 54);
@@ -311,10 +315,12 @@ select,input:hover{
     padding: 3%;
 }
 .faq span{
+    font-family: sans-serif;
     color: white;
     font-size: 1.5em;
 }
 .regis{
+font-family: sans-serif;
 height: 30%;
 width: 100%; 
 display: flex;
@@ -323,6 +329,7 @@ padding: 10px;
 margin-bottom: 5%;
 }
 .faq input[type=email]{
+font-family: sans-serif;
 width: 24%;
 margin: 0.5%;
 font-weight: bold;
@@ -335,6 +342,7 @@ font-weight: lighter;
 color: white;
 }
 .faq input[type=button]{
+font-family: sans-serif;
 height: 55px;
 width: 13%;
 margin: 0.5%;
@@ -344,11 +352,57 @@ font-weight: bold;
 font-size: larger;
 border-radius: 3px;
 }
-
+.contactus{
+    width: 100%;
+    background: black;
+    font-family: sans-serif;
+    font-size: 1em;
+    padding: 5%;
+}
+.contactus span{
+    color: rgb(178, 162, 162);
+    margin-left: 7.5%;
+    margin-top: 1%;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: rgb(178, 162, 162);
+}
+ul li{
+    margin-top: 15px;
+}
+.contactus .hl{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.hl1,.hl2{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.foot{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.foot select{
+    width: 9%;
+    background: rgb(21, 20, 20);
+    color: white;
+    font-size: medium;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    height: 30px;
+    margin-left: 7.5%;
+}
 
 @media(max-width: 768px){
 .home{
-    height: 70%;
+    height: 90%;
 }
 .con h1{
     font-family: sans-serif;
@@ -356,7 +410,7 @@ border-radius: 3px;
     font-weight: 900;
 }
 .con span{
-    font-size: 1.1em;
+    font-size: 1.05em;
 }
 .reg{
     display: flex;
@@ -526,15 +580,18 @@ border-radius: 3px;
     font-size: 1.5em;
 }
 .faq article details summary{
-    font-size: 1.05em;
+    font-size: 1.01em;
 }
 .faq article details p{
-    font-size: 1.05em;
+    font-size: 1.01em;
 }
 .faq span{
     font-size: 1.25em;
     text-align: center;
     padding: 4% 12%;
+}
+.faq .symbol{
+    padding: 4% 5%;
 }
 .faq .regis{
     display: flex;
@@ -550,5 +607,25 @@ border-radius: 3px;
     width: 40%;
     margin-top: 10px;
     margin-bottom: 12%;
+}
+.contactus .hl{
+    display: flex;
+    flex-direction: column;
+}
+.contactus span{
+    margin-top: 3%;
+}
+.hl1,.hl2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    padding: 0 8%;
+}
+.hl2 ul:nth-child(2){
+    margin-right: 14%;
+}
+.contactus .foot select{
+    width: 35%;
 }
 }
